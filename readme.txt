@@ -1,11 +1,10 @@
 === IP Address Widget II ===
-Authors: Find-IP.net
-Author URI: http://www.find-ip.net
+Contributors: myproxy
+Donate link: http://www.find-ip.net/
 Tags: ip address widget, ip address, ip, ipaddress, browser, os, location, information, about you, visitor, widget, sidebar
 Requires at least: 2.7
 Tested up to: 3.4.2
 Stable tag: 1.0.1
-Version: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,10 +14,10 @@ Show the visitor's IP address, country, city, region, operating system and brows
 Show the visitor's IP address, country, city, region, operating system and browser in a widget. You can specify the information to be shown. How to use it? Please goto the admin menu Appearance > Widget. Then drag the IP Address widget to your Sidebar. Here is a live demo: http://www.my-proxy.com/blog/
 
 == Screenshots ==
-1. screen1.png
-2. screen2.png
-3. screen3.png
-4. admin.png
+1. screen shot 1
+2. screen shot 2
+3. screen shot 3
+4. configure
 
 == Installation ==
 
