@@ -37,10 +37,10 @@ You can use our another widget at http://www.find-ip.net/ip-script
 
 == Changelog ==
 
-= 1.01 =
+= 1.0.1 =
 - first release by http://www.find-ip.net
 
 == Upgrade Notice ==
 
-= 1.01 =
+= 1.0.1 =
 - first release
