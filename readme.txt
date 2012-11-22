@@ -11,7 +11,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Show the visitor's IP address, country, city, region, operating system and browser in a widget. You can specify the information to be shown.
 
 == Description ==
-Show the visitor's IP address, country, city, region, operating system and browser in a widget. You can specify the information to be shown. How to use it? Please goto the admin menu Appearance > Widget. Then drag the IP Address widget to your Sidebar. Here is a live demo: http://www.my-proxy.com/blog/
+Show the visitor's IP address, country, city, region, operating system and browser in a widget. You can specify the information to be shown. 
+
+How to use it? Please goto the admin menu Appearance > Widget. Then drag the IP Address widget to your Sidebar. Here is a live demo: http://www.my-proxy.com/blog/
 
 == Screenshots ==
 1. screen shot 1
