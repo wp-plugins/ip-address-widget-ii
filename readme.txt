@@ -4,7 +4,7 @@ Donate link: http://www.find-ip.net/
 Tags: ip address widget, ip address, ip, ipaddress, browser, os, location, information, about you, visitor, widget, sidebar
 Requires at least: 2.7
 Tested up to: 3.4.2
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,10 +37,16 @@ You can use our another widget at http://www.find-ip.net/ip-script
 
 == Changelog ==
 
+= 1.0.2 =
+- add an option "flag shadow" to specify whether to draw the shadow for the country flag
+
 = 1.0.1 =
 - first release by http://www.find-ip.net
 
 == Upgrade Notice ==
 
+= 1.0.2 =
+- You can now configure the shadow of the country flag. It's better to turn it off in dark background. Note: the shadow effect is not supported by IE8. 
+
 = 1.0.1 =
-- first release
+- First release

@@ -5,7 +5,7 @@ Plugin URI: http://www.find-ip.net/ip-script
 Description: Show the visitor's IP address, country, city, region, operating system and browser in a widget. You can specify the information to be shown.
 Author: Find-IP.net
 Author URI: http://www.find-ip.net/
-Version: 1.0.1
+Version: 1.0.2
 */
 
 function ip_address_widget_check_options($args) {
@@ -17,7 +17,8 @@ function ip_address_widget_check_options($args) {
 		'region' => '1',
 		'language' => '1',
 		'system' => '1',
-		'browser' => '1',		
+		'browser' => '1',
+		'shadow' => '1',
 		);
 	if (!is_array($args)) { $args = array(); }
 	return array_merge($def, $args);
@@ -32,7 +33,12 @@ function ip_address_widget_info($attr) {
 	$language = $options["language"];
 	$browser = $options["browser"];
 	$system = $options["system"];
-	$out = "<style>#findipinfowp img{box-shadow: 1px 1px 3px #ccc;border:0} #findipinfowp li{cursor: pointer}</style>";
+	$shadow = $options["shadow"];	
+	$out = "<style>#findipinfowp img{border:0} #findipinfowp li{cursor: pointer}</style>";
+	if($shadow)
+	{
+		$out = "<style>#findipinfowp img{box-shadow: 1px 1px 3px #ccc;border:0} #findipinfowp li{cursor: pointer}</style>";
+	}
 	$out .="<ul id=\"findipinfowp\"><script src=\"http://api.find-ip.net/wp-widget.js?country=$country&flag=$flag&city=$city&region=$region&language=$language&browser=$browser&system=$system\"></script>";
 	$out .= "<li>Powered by <a href=\"http://www.find-ip.net/\" target=\"_blank\">Find-IP.net</a></li>";
 	$out .= "</ul>";
@@ -61,6 +67,7 @@ function widget_ip_address_control() {
 		$options['city'] = (isset($_POST['ip_address_widget-city'])) ? "1" : "0";
 		$options['region'] = (isset($_POST['ip_address_widget-region'])) ? "1" : "0";
 		$options['language'] = (isset($_POST['ip_address_widget-language'])) ? "1" : "0";
+		$options['shadow'] = (isset($_POST['ip_address_widget-shadow'])) ? "1" : "0";
 		update_option("ip_address_widget", $options);
 	}
 ?>
@@ -73,6 +80,7 @@ function widget_ip_address_control() {
 	<input type="checkbox" <?php if($options['system'] == 1) echo "checked=\"checked\""; ?>" value="1" id="ip_address_widget-system" name="ip_address_widget-system"/> <?php echo __('System', 'ip-address-widget') ?><br>
 	<input type="checkbox" <?php if($options['browser'] == 1) echo "checked=\"checked\""; ?>" value="1" id="ip_address_widget-browser" name="ip_address_widget-browser"/> <?php echo __('Browser', 'ip-address-widget') ?><br>
 	<input type="checkbox" <?php if($options['language'] == 1) echo "checked=\"checked\""; ?>" value="1" id="ip_address_widget-language" name="ip_address_widget-language"/> <?php echo __('Language', 'ip-address-widget') ?><br>	
+	<input type="checkbox" <?php if($options['shadow'] == 1) echo "checked=\"checked\""; ?>" value="1" id="ip_address_widget-shadow" name="ip_address_widget-shadow"/> <?php echo __('Flag Shadow', 'ip-address-widget') ?><br>	
 	<input type="hidden" id="ip_address_widget-submit" name="ip_address_widget-submit" value="1" />
 <?php
 }
