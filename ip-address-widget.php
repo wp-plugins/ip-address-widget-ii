@@ -5,7 +5,7 @@ Plugin URI: http://www.find-ip.net/ip-script
 Description: Show the visitor's IP address, country, city, region, operating system and browser in a widget. You can specify the information to be shown.
 Author: Find-IP.net
 Author URI: http://www.find-ip.net/
-Version: 1.0.2
+Version: 1.0.1
 */
 
 function ip_address_widget_check_options($args) {
@@ -34,10 +34,10 @@ function ip_address_widget_info($attr) {
 	$browser = $options["browser"];
 	$system = $options["system"];
 	$shadow = $options["shadow"];	
-	$out = "<style>#findipinfowp img{border:0} #findipinfowp li{cursor: pointer}</style>";
+	$out = "<style>#findipinfowp img{border:0;display:inline} #findipinfowp li{cursor: pointer}</style>";
 	if($shadow)
 	{
-		$out = "<style>#findipinfowp img{box-shadow: 1px 1px 3px #ccc;border:0} #findipinfowp li{cursor: pointer}</style>";
+		$out = "<style>#findipinfowp img{box-shadow: 1px 1px 3px #ccc;border:0;display:inline} #findipinfowp li{cursor: pointer}</style>";
 	}
 	$out .="<ul id=\"findipinfowp\"><script src=\"http://api.find-ip.net/wp-widget.js?country=$country&flag=$flag&city=$city&region=$region&language=$language&browser=$browser&system=$system\"></script>";
 	$out .= "<li>Powered by <a href=\"http://www.find-ip.net/\" target=\"_blank\">Find-IP.net</a></li>";
