@@ -5,7 +5,7 @@ Plugin URI: http://www.find-ip.net/ip-script
 Description: Show the visitor's IP address, country, city, region, operating system and browser in a widget. You can specify the information to be shown.
 Author: Find-IP.net
 Author URI: http://www.find-ip.net/
-Version: 1.0.1
+Version: 1.0.3
 */
 
 function ip_address_widget_check_options($args) {
