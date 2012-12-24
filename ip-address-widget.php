@@ -37,7 +37,7 @@ function ip_address_widget_info($attr) {
 	$out = "<style>#findipinfowp img{border:0;display:inline} #findipinfowp li{cursor: pointer}</style>";
 	if($shadow)
 	{
-		$out = "<style>#findipinfowp img{box-shadow: 1px 1px 3px #ccc;border:0;display:inline} #findipinfowp li{cursor: pointer}</style>";
+		$out = "<style>#findipinfowp img{box-shadow: 1px 1px 3px #ccc;border:0;display:inline;} #findipinfowp li{cursor: pointer}</style>";
 	}
 	$out .="<ul id=\"findipinfowp\"><script src=\"http://api.find-ip.net/wp-widget.js?country=$country&flag=$flag&city=$city&region=$region&language=$language&browser=$browser&system=$system\"></script>";
 	$out .= "<li>Powered by <a href=\"http://www.find-ip.net/\" target=\"_blank\">Find-IP.net</a></li>";
